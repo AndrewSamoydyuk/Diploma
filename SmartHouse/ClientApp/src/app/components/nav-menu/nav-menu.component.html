@@ -11,20 +11,34 @@
         </div>
         <div class='clearfix'></div>
         <div class='navbar-collapse collapse' [ngClass]='{ "in": isExpanded }'>
-            <ul class='nav navbar-nav'>
+
+            <ul *ngIf="userStatus" class='nav navbar-nav'>
+                <li [routerLinkActive]='["link-active"]' [routerLinkActiveOptions]='{ exact: true }'>
+                    <a [routerLink]='["/"]' (click)='collapse()'>
+                        <span class='glyphicon glyphicon-home'></span> Home
+                    </a>
+                </li>
+                <li>
+                    <a (click)="logout()">
+                        <span class='glyphicon glyphicon-log-out'></span> Logout
+                    </a>
+                </li>
+            </ul>
+
+            <ul *ngIf="!userStatus" class='nav navbar-nav'>
                 <li [routerLinkActive]='["link-active"]' [routerLinkActiveOptions]='{ exact: true }'>
                     <a [routerLink]='["/"]' (click)='collapse()'>
                         <span class='glyphicon glyphicon-home'></span> Home
                     </a>
                 </li>
                 <li [routerLinkActive]='["link-active"]'>
-                    <a [routerLink]='["/counter"]' (click)='collapse()'>
-                        <span class='glyphicon glyphicon-education'></span> Counter
+                    <a [routerLink]='["/login"]' (click)='collapse()'>
+                        <span class='glyphicon glyphicon-log-in'></span> Login
                     </a>
                 </li>
                 <li [routerLinkActive]='["link-active"]'>
-                    <a [routerLink]='["/fetch-data"]' (click)='collapse()'>
-                        <span class='glyphicon glyphicon-th-list'></span> Fetch data
+                    <a [routerLink]='["/registration"]' (click)='collapse()'>
+                        <span class='glyphicon glyphicon-ok-circle'></span> Registration
                     </a>
                 </li>
             </ul>
