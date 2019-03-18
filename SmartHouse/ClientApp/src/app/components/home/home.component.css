@@ -1,0 +1,38 @@
+.homePageWrapper{
+  width: 100%;
+  height: 100%;
+}
+
+.welcomeText {
+  margin-left: 30%;
+  margin-top: 150px;
+}
+
+h1 {
+  text-shadow: -1px -1px #000, 0 1px 0 #444;
+  color: #222;
+  transition: all 1s;
+}
+
+h1:hover {
+  text-shadow: -1px -1px #000, 0 1px 0 #444;
+  color: #1A1A1A;
+}
+
+.text-typing
+{
+  width: 40em;
+  font-size: 60px;
+  font-family: 'Marck Script', cursive;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: type 7s steps(50, end);
+}
+
+@keyframes type{
+  from { width: 0; }
+}
+
+@-webkit-keyframes type{
+  from { width: 0; }
+}

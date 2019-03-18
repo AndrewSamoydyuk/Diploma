@@ -6,6 +6,10 @@ a {
   cursor: pointer;
 }
 
+.navbar {
+  background-color: rgba(0, 0, 0, 0.911);
+}
+
 /* Highlighting rules for nav menu items */
 li.link-active a,
 li.link-active a:hover,
@@ -27,7 +31,7 @@ li.link-active a:focus {
     /* On small screens, convert the nav menu to a vertical sidebar */
     .main-nav {
         height: 100%;
-        width: calc(25% - 20px);
+        width: calc(17% - 20px);
     }
     .navbar {
         border-radius: 0px;
@@ -60,4 +64,19 @@ li.link-active a:focus {
         overflow: hidden;
         text-overflow: ellipsis;
     }
+}
+
+.navbar-brand {
+  width: 150px !important;
+  padding-top: 15px;
+}
+
+.smallLogo {
+  margin-left: 5px;
+  margin-top: 10px;
+  background-image: url('../../../assets/logo.png');
+  height: 30px;
+  width: 30px;
+  float: left;
+  background-size: cover;
 }
